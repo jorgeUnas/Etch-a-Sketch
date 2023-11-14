@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#grids {
+    background-color: white;
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.gridElem{
+    background-color: white;
+    border: 1px solid black;
+     flex:  1 0;
+     display: flex;
+}
+.square{
+    border: 1px solid black;
+    flex 1 0;
+}
+/*
+@media screen and (min-width: 600px) {
+    .gridElem{
+     flex:  1;
+    }
+}
+*/
