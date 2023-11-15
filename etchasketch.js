@@ -12,27 +12,29 @@ start.addEventListener('click', () => {
         for (let i = 1; i<=numGrids; i++){
             const gridElem = document.createElement('div');
              gridElem.setAttribute('class', 'gridElem');
-                for (let j = 1; j<=numGrids; j++){
+                for (let j = 1; j<= numGrids; j++){
                     const square = document.createElement('div');
                     square.setAttribute('class', 'square');
                     gridElem.appendChild(square);
-                };
-             
-            grids.appendChild(gridElem);
-        
-            // putting color on the divs
-            gridElem.addEventListener('mouseover', () => {
-            gridElem.style.backgroundColor = 'black';
-                if(!gridElem.style.opacity){
+                    
+                    // putting color on the divs
+            square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'black';
+                /*if(!gridElem.style.opacity){
                     gridElem.style.opacity = 0.1;
                 }else {
                     gridElem.style.opacity += 0.1
-                };    
-            })
+                };  */  
+            }) 
+                };
+             
+            grids.appendChild(gridElem);
+            
+            
             
         }
     }else{
-       alert('Enter a valid pad size.')
+       alert('Enter a valid pad size.');
     }
 
 })
