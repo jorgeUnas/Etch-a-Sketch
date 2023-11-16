@@ -2,9 +2,12 @@ const grids = document.querySelector('#grids');
 const start = document.querySelector('#start');
 const random = document.querySelector('#random');
 const blackmode = document.querySelector('#blackMode');
+const erasermode = document.querySelector('#eraser');
 
 const black = RGBA(0,0,0,1.0);
+const white = RGBA(255,255,255,1.0);
 var rainbow = false;
+var eraser = false;
 
 
 
@@ -14,6 +17,11 @@ random.addEventListener('click', () => {
     rainbow = true;
 });
 blackmode.addEventListener('click', () => {
+    rainbow = false;
+    eraser = false;
+});
+erasermode.addEventListener('click', () => {
+    eraser = true;
     rainbow = false;
 });
 
@@ -42,7 +50,9 @@ start.addEventListener('click', () => {
                         
                         if (rainbow){  // rainbow mode
                             square.style.backgroundColor = randomColors();
-                        }else{  // black mode
+                        }else if (eraser){  // black mode
+                            square.style.backgroundColor = white;
+                        }else{
                             square.style.backgroundColor = black;
                         }
                          

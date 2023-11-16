@@ -2,6 +2,55 @@
     margin: 0px;
     padding: 0px;
 }
+h1{
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 40px;
+}
+main{
+    display: flex;
+}
+#buttons, #empty{
+    flex: 1;
+    max-width: 500px;
+    min-width: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: end;
+}
+#start{
+    background-color: yellow;
+}
+#blackMode{
+    background-color: black;
+    color: white;
+}
+#random{
+    background-image: linear-gradient(to right, red, orange, white, pink, blue);
+}
+#eraser{
+    background-color: white;
+}
+button{
+    max-width: 200px;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 20px;
+}
+button:hover{
+    width: 230px;
+    height:  60px;
+}
+#pad{
+    flex: 2;
+    min-width: 600px;
+}
 
 #grids {
     background-color: white;
@@ -10,13 +59,11 @@
     height: 600px;
     margin: 0 auto;
     display: flex;
-    
-    
    
 }
 .gridElem{
     background-color: white;
-    border: 1px solid black;
+    
      flex:  1 0;
      display: flex;
      flex-direction: column;
@@ -25,7 +72,7 @@
 }
 .gridElem .square{
     background-color: white;
-    border: 1px solid black;
+    
     flex: 1;
    
 }
