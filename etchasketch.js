@@ -10,7 +10,6 @@ var rainbow = false;
 var eraser = false;
 
 
-
 //rainbow activactor
 
 random.addEventListener('click', () => {
@@ -26,8 +25,7 @@ erasermode.addEventListener('click', () => {
 });
 
 
-
-
+//Drawing on the sketch
 
 start.addEventListener('click', () => {
     
@@ -64,11 +62,14 @@ start.addEventListener('click', () => {
             
             
         }
-    }else{
-       alert('Enter a valid pad size.');
+    }else if(numGrids == 0){
+        // this prevents a second pop-up
+    }
+    else{
+       alert('Enter a pad size between 1 and 100.');
     }
 
-})
+});
 
 
 function RGBA(red,green,blue,alpha) {
@@ -78,7 +79,7 @@ function RGBA(red,green,blue,alpha) {
     this.alpha = alpha;
         return "rgba("+this.red+","+this.green+","+this.blue+","+this.alpha+")";
 
-}
+};
 
 //use ramdom colors
 
@@ -88,9 +89,8 @@ function randomColors(){
     let blue = Math.round(Math.random()*255);
     
     return RGBA(red, green, blue, 1.0);
-}
+};
 
-console.log(randomColors());
 
 
 
