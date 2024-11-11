@@ -21,7 +21,7 @@ main{
     flex-direction: column;
     gap: 15px;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
 }
 #start{
     background-color: yellow;
